@@ -1,74 +1,95 @@
 *
 {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+html,body{
+    width: 100%;
+    height: 100vh;
+    background-image:url(./pexels-muffin-2468773.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
-.legit
-{
+nav{
+    width: 100%;
+    height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.con
-{
-    border: 3px solid black;
-    border-radius: 10px;
-    width: 500px;
-    height: 600px;
-    background-color: beige;
+    justify-content: space-around;
+    margin-top: 10px;
 }
 
-.mg
+#logo
 {
-    display: flex;
-     gap: 40px;
-     margin: 10px;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+
+.reg a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    background: indianred;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+}
+
+.txt 
+{
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+.txt span{
+    letter-spacing: 5px;
+}
+.txt h1{
+    font-size: 3.5em;
+}
+.txt a{
+    text-decoration: none;
+    color: white;
+    background-color: indianred;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+}
+
+.links a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height:100%;
+    border-bottom: 2px solid indianred;
+    transition:0.4s linear;
+}
+.links a:hover:before 
+{
+    width: 90%;
+}
+
+@media screen  and (max-width:786px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
     
-}
-
-.mg img{
-    border: 3px solid black;
-    border-radius: 100px;
-   
-}
-
-.mg p 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     gap: 80px;
-}
-
-.headin
-{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-}
-
-.about
-{
-    padding: 10px;
-}
-footer{
-    margin: 10px;
-}
-footer h2
-{
-  font-family: Arial, Helvetica, sans-serif;   
-}
-
-footer ul{
-    list-style-position: inside;
-    padding-left: 10px;
 }
